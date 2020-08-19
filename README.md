@@ -9,7 +9,7 @@ Trained using two approaches for 250 epochs:
 1. Keeping the base model's layer fixed, and
 2. By training end-to-end
 
-##hyper parameter
+## Hyper parameter
     training_epochs = 250
     batch_size = 128
     learning_rate = 0.1
@@ -27,8 +27,8 @@ Source Files:
 * vgg.py - Modified version of Keras VGG implementation to change the minimum input shape limit for cifar-10 (32x32x3)
 
 Outputs:
-* [outputs/output_1.txt](outputs/output_1.txt "Outputs for Approach 1")
-* [outputs/output_2.txt](outputs/output_2.txt "Outputs for Approach 2")
+
+
 
 Trained Models:
 
