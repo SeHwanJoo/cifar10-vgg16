@@ -23,8 +23,6 @@ Second approach reached a validation accuracy of 97.41%.
 
 #### Files
 Source Files:
-* vgg_transfer.py - The main file with training
-* vgg.py - Modified version of Keras VGG implementation to change the minimum input shape limit for cifar-10 (32x32x3)
 
 Outputs:
 
