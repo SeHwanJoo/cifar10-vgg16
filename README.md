@@ -5,9 +5,18 @@ CNN to classify the cifar-10 database by using a vgg16 trained on Imagenet as ba
 The approach is to transfer learn using the first three blocks (top layers) of vgg16 network and adding FC layers on top of them and train it on CIFAR-10. 
 
 ## Training
-Trained using two approaches for 50 epochs:
+Trained using two approaches for 250 epochs:
 1. Keeping the base model's layer fixed, and
 2. By training end-to-end
+
+##hyper parameter
+    training_epochs = 250
+    batch_size = 128
+    learning_rate = 0.1
+    momentum = 0.9
+    lr_decay = 1e-6
+    lr_drop = 20
+
 
 First approach reached a validation accuracy of 95.06%. 
 Second approach reached a validation accuracy of 97.41%. 
@@ -22,12 +31,8 @@ Outputs:
 * [outputs/output_2.txt](outputs/output_2.txt "Outputs for Approach 2")
 
 Trained Models:
-* [Approach 1](trained_model/cifar10-vgg16_model.h5 "Trained Model for Approach 1")
-* [Approach 2](trained_model/cifar10-vgg16_model_alllayers.h5 "Trained Model for Approach 2")
 
 Tensorboard graphs (Appoach 2):
 Validation Accuracy:
-![Validation Accuracy](outputs/val_acc.png?raw=true "Validation Accuracy")
 
 Training Accuracy:
-![Training Accuracy](outputs/acc.png?raw=true "Training Accuracy")
