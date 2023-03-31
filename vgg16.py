@@ -107,7 +107,7 @@ class VGG16Model(tf.keras.Model):
         net = self.flat(net)
         net = self.dense1(net)
         net = self.batchnorm(net)
-        net = self.drop(net)
+        net = self.dropOut(net)
         net = self.dense2(net)
         net = self.softmax(net)
         return net
@@ -161,7 +161,7 @@ if __name__ == '__main__':
 
     model = VGG16Model()
 
-    optimizer = tf.keras.optimizers.SGD(learning_rate=learning_rate,
+    optimizer = tf.keras.optimizers.legacy.SGD(learning_rate=learning_rate,
                                         decay=1e-6, momentum=momentum, nesterov=True)
     model.compile(loss='categorical_crossentropy', optimizer=optimizer, metrics=['accuracy'])
 
